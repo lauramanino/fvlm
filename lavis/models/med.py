@@ -65,7 +65,7 @@ class BertEmbeddings(nn.Module):
             config.max_position_embeddings, config.hidden_size
         )
 
-        if config.add_type_embeddings:
+        if getattr(config, "add_type_embeddings", True):
             self.token_type_embeddings = nn.Embedding(
                 config.type_vocab_size, config.hidden_size
             )
