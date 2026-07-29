@@ -340,7 +340,7 @@ class BlipPretrain(BlipBase, SharedQueueMixin, MomentumDistilationMixin):
         )
         
         ckpt = torch.load(
-            '/home/laura/fvlm/mae_pretrain_vit_base.pth',
+            'mae_pretrain_vit_base.pth',
             map_location='cpu'
         )
 
